@@ -11,7 +11,7 @@ ROAM Data's Mobile Commerce Manager (__MCM__) provided a host of services and ap
 
 <img src="/images/work/roam-data/mcm.png"  width= "600" alt="MCM platform brochure" style="margin: 0 auto">
 
-Tenure:
+Role:
 - __2013 - 2015__ - ROAM Data (Software Engineer, R&D)<br />
 - __2015 - 2018__ - Ingenico Mobile Solutions (Software Engineer, Core Engineering) <br />
 

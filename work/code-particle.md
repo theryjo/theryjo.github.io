@@ -23,7 +23,7 @@ __Code Particle__ is an industry-leading development studio in Los Angeles, with
 
 <br />
 
-Tenure:
+Role:
 - __2018 - 2019__ - Software Developer<br />
 
 Contributions:

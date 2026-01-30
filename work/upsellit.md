@@ -15,7 +15,7 @@ __UpSellit__ provides a suite of marketing and analytics solutions in the domain
 <a href="https://us.upsellit.com/"><u>Website</u></a>
 </div>
 
-Tenure:
+Role:
 - __2019 - 2020__ - Full Stack Java Developer<br />
 
 Contributions:
