@@ -7,10 +7,7 @@ eleventyNavigation:
 ---
 ## Hi, I'm Ryan.
 
-I'm a software developer with 10+ years of experience across the web stack. I've primarily worked with Typescript, Javascript, and JVM langs.
+<br />
+A software developer with experience across the web stack - primarily frontend and JVM.
 
-I've put together this site to share my professional experience, thoughts, and creations.
-<br /><br />
-### Welcome! Thank you for visiting.
-
-More to come...
+### Welcome!
