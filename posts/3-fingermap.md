@@ -4,34 +4,32 @@ date: 2023-11-16
 tags: ['web app','open source']
 ---
 
-__A few months ago__, I made my first-ever open source contribution.
+__A few months ago__, I committed my first open source contribution.
 
-This admission may surprise, even shock, as I've worked in industry across a variety of stacks for over a decade.
+This may surprise as I've worked in software for a number of years.
 
-While it's true my employers have been small and mid-size companies with a penchant for using rather than creating open source software, the real reason I've made it so far without contributing is simple...
+While my previous employers have not been contributors themselves, the real reason that I haven't contributed yet is simply that I've never tried to.
 
-I never tried.
-
-Indeed, the massive and welcoming ecosystem for open source software today leaves little excuse to not take part. As noted on <u>[Github's blog](https://github.blog/2022-11-17-octoverse-2022-10-years-of-tracking-open-source/)</u>:
+Indeed, the large and welcoming ecosystem for open source software today leaves little excuse to not take part. As noted on <u>[GitHub's blog](https://github.blog/2022-11-17-octoverse-2022-10-years-of-tracking-open-source/)</u>:
 > "In 2022 alone, developers started 52 million new open source projects on GitHub—and developers across GitHub made more than 413 million contributions to open source projects."
 
-This is not to say that issues of project scarcity, gatekeeping, or other barriers to entry don't exist, but the simple fact is that a vast array of opportunities exists for developers in many domains and of many different skill levels.
+This is not to say that barriers to entry don't exist, but that there exists, in fact, a vast array of opportunities for developers of many different skill levels across a multitude of domains.
 
-Which brings me to...
+Which brings me to the project in question.
 
 #### <u><b>[MonkeyType](https://monkeytype.com/)</b></u>
 
-Monkeytype was created in 2020 as a single-developer passion project to make a minimalist, customizable online typing test. Since then it has grown rapidly, with <u>[365 million tests taken, an active Discord server, and hundreds of supporters and contributors](https://monkeytype.com/about)</u>.
+Monkeytype was created in 2020 as a single-developer passion project to make an online, minimalist, and customizable typing test. Since then it has grown rapidly, with <u>[365 million tests taken, an active Discord server, and hundreds of supporters and contributors](https://monkeytype.com/about)</u>.
 
 <img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="monkeytype app screenshot" style="">
 
-I've been a big fan of Monkeytype for my typing practice, with highest speeds to date being 135wpm over 15 seconds and 117wpm over 60 seconds (100% accuracy). When I saw that Monkeytype is <u>[open-source on Github](https://github.com/monkeytypegame)</u>, I saw a perfect opportunity to contribute.
+I'm a big fan of Monkeytype for my own typing practice, with records to date of 135wpm over 15 seconds and 117wpm over 60 seconds (with 100% accuracy). When I saw that Monkeytype is <u>[open-source on Github](https://github.com/monkeytypegame)</u>, I saw it as a perfect opportunity to contribute.
 
-In particular, I observed that the subproject <u>[Fingermap](https://github.com/monkeytypegame/monkeytype-fingermap)</u>, a keyboard finger map editor, exhibited multiple issues I would happily take on, including:
+Looking for candidates for improvement, I observed that the subproject <u>[Fingermap](https://github.com/monkeytypegame/monkeytype-fingermap)</u>, a keyboard finger map editor, exhibited multiple issues I would happily take on, including:
 
-- An inability to select keys using keypress.
-- A lack of mobile layout/responsiveness.
-- An outdated / diverged style as compared to the main site.
+- An inability to select keys with keypress.
+- A lack of a mobile-friendly responsive layout.
+- A diverged style as compared to the main site.
 
 <img src="/images/3-fingermap/fm-old.png"  width= "600" alt="fingermap old screenshot" style="">
 
@@ -41,7 +39,7 @@ I started by joining the Monkeytype Discord, creating an issue on the repo, fork
 
 The response was prompt and positive!
 
-_Miodec_ expressed interest in the update and suggested additional changes. Over the course of a week and with numerous iterations, updates addressing all items of interest were PR'd and merged to the main repo. 
+_Miodec_ expressed interest in the update and suggested additional changes. Over the course of a week and a few iterations, updates addressing all items of interest were PR'd and merged to the main repo. 
 
 <img src="/images/3-fingermap/fm-new.png"  width="600" alt="fingermap new screenshot" style="">
 
@@ -50,11 +48,11 @@ _Miodec_ expressed interest in the update and suggested additional changes. Over
 
 <img src="/images/3-fingermap/fm-new-mobile.png"  width="300" alt="fingermap mobile new screenshot" style="">
 
-Some noteworthy process and implementation points:
+Some noteworthy items:
 
+- __Responsiveness__ required a new mobile header as well as a mechanism for keyboard resizing. This proved interesting, as the existing code was resistant to standard sizing mechanisms. In particular, preserving the aspect ratios on resize was tricky given the layout and markup. To solve this, I created a wrapper that I call an _Aspect Ratio Box_ - scaling smoothly while preserving aspect ratio and interactivity. I've posted a <u><b>[demo](https://codepen.io/TheRyjo/pen/ZEmRmgm)</b></u> to Codepen.
 - __Keypress selection__ required changing other shortcuts to remove conflicts. Previously, keys 1-10 had been used for finger selection. The shift key also had overlap as a modifier key, which I resolved with logic to differentiate between quick press (selection) and hold (modifier).
 - __Header updates__ entailed some questions about icon usage, label presence, and styling. These were ultimately resolved with a healthy deference to the main site.
-- __Responsiveness__ required a new mobile header as well as a mechanism for keyboard resizing. This proved pretty interesting, as the existing code was resistant to standard sizing mechanisms. In particular, preserving the aspect ratios on resize was tricky given the layout and markup. To solve this, I created a wrapper that I call an _Aspect Ratio Box_ - scaling smoothly while preserving aspect ratio and interactivity. I've posted a <u><b>[demo](https://codepen.io/TheRyjo/pen/ZEmRmgm)</b></u> to Codepen.
 
 At the time of writing, Fingermap is hosted at <u>[https://fingermap.monkeytype.com/](https://fingermap.monkeytype.com/)</u>
 
