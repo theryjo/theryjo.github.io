@@ -5,7 +5,7 @@ date: 2023-11-25
 tags: ['mavice', 'ford', 'vue', 'web apis']
 highlight: true
 ---
-<div style="text-align: center">
+<div style="text-align: left">
 (Cross-posted with permission from
 <u><a href="https://www.mavice.com/blog/dynamic-alignment-with-resizeobserver/">Mavice Blog</a></u>)
 </div>

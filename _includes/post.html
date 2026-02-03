@@ -1,4 +1,18 @@
 ---
 layout: layout.html
 ---
+<div class="post__meta">
+  <span class="post__date">{{ page.date | fixUTC }}</span>
+</div>
 {{ content }}
+
+<style>
+    .post__meta {
+        margin: 0 0 .5em 0;
+        line-height: 1.5em;
+        text-align: right;
+    }
+    .post__date {
+        color: #666;
+    }
+</style>
