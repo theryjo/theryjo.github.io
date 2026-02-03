@@ -23,7 +23,7 @@ module.exports = function(eleventyConfig) {
         if (!date)
             return "N/A"
         const utc = date.toUTCString();
-        return moment.utc(utc).format("YYYY-MM-DD");
+        return moment.utc(utc).format("MM-DD-YYYY");
     });
     eleventyConfig.addFilter("hiddenTagExcluded", (...args) => {
         const tags = args[0];
