@@ -3,7 +3,7 @@ title: Omnitool
 date: 2023-11-13
 tags: ['chrome Extension', 'vue', 'featured']
 ---
-<b><u>[Omnitool](https://github.com/theryjo/omnitool)</u></b> is a Chrome extension prototype that enables quick access to custom utilities.
+<b><u>[Omnitool](https://github.com/theryjo/omnitool)</u></b> is a prototype Chrome extension allowing fast access to custom utilities.
 
 <div style="text-align: center">
 <video controls autoplay loop muted width="375" style="text-align: center">
@@ -13,20 +13,20 @@ tags: ['chrome Extension', 'vue', 'featured']
 </div>
 <br />
 
-Omnitool has an omnibox-style interface for tool search and invocation, offering speed, simplicity, and flexibility for tasks lacking support from built-in browser tools.
-
-I created Omnitool with inspiration from experience on a small developer team supporting a suite of CMS and service-backed web applications for a Fortune 50 client. Day-to-day operations included repeated tasks such as:
-- _Navigating complex web environments_.
+Omnitool was inspired by my developer experience on a small team supporting a suite of web applications for a Fortune 50 client. Day-to-day operations included tedious, repeated tasks such as:
+- _Navigating complicated environments_.
 - _Making frequent API calls to trigger cache clears and other operations_.
 - _Inspecting and reproducing web application state_.
 - _Debugging client-initiated service calls_.
 
-Team members had previously written a handful of small (and very useful) one-off browser extensions. The concept for Omnitool came about as a means to consolidate these tools and provide an efficient, intuitive interface.
+Team members had previously written a handful of small and useful one-off browser extensions. I designed Omnitool as a way to consolidate these one-off tools in an efficient, flexible interface.
 
-Some noteworthy features listed by objective:
+Omnitool has an omnibox-style interface for utility search and invocation. It offers speed, simplicity, and flexibility for tasks lacking support from built-in browser tools.
 
-1. SIMPLE
-   - _A unified omnibox-style tool search interface_.
+Some noteworthy features:
+
+1. SIMPLICITY
+   - _A unified tool search interface_.
    - _A consistent command-based model for tool invocation_.
    - _A pattern for wrapping pre-existing pages as tools with an 'iframe'_.
 
@@ -37,9 +37,9 @@ Some noteworthy features listed by objective:
 <br />
 
 2. FAST
-    - _Quick-opening when configured with a keyboard shortcut (rec. <kbd>CMD</kbd> + <kbd>K</kbd>)_.
+    - _Opens with a configurable keyboard shortcut (rec. <kbd>CMD</kbd> + <kbd>K</kbd>)_.
     - _Autocomplete for tool search_.
-    - _A tool invocation history with shortcuts for tool selection and re-invocation_.
+    - _An invocation history with shortcuts for tool selection and re-invocation_.
  
 <br />
 <div style="white-space: nowrap">
@@ -61,14 +61,14 @@ Some noteworthy features listed by objective:
 </div>
 <br />
 
-The Omnitool 'demo-tools' branch includes tool samples that showcase these features (as shown in screenshots above.)
+The Omnitool 'demo-tools' branch includes tool samples that showcase these features (as shown in the above screenshots).
 
-The tool development pattern is accessible to most web developers. A tool definition consists of a small package of files.
+The tool development pattern is very straightforward. A tool definition consists of a small package of files.
 
 <img src="/images/2-omnitool/tool-files.png"  width="225" alt="tool definition files screenshot" style="display: inline-block; vertical-align: top">
 <br />
 
-The tool logic and metadata is defined in a JS/TS module.
+The tool logic and metadata are defined in a JS/TS module.
 
 <img src="/images/2-omnitool/tool-code.png"  width="450" alt="sample tool logic screenshot" style="display: inline-block; vertical-align: top">
 <br />
@@ -79,16 +79,11 @@ The optional tool UI is defined in a linked Vue component.
 <br />
 <br />
 
-See the <u>[source](https://github.com/theryjo/omnitool/tree/demo-tools)</u> on Github.
+See <u>[source](https://github.com/theryjo/omnitool/tree/demo-tools)</u> on GitHub.
 
-That's about it! In the future I may provide additional implementation details in a separate post.
-
-Some quirks that I would like to address prior to release:
+Some outstanding items:
 - Omnitool is not listed in the Chrome Web Store. Although I haven't tried yet, this may be impossible due to the store's "single purpose" policy for extensions, which has been in effect since 2013. This [policy](https://developer.chrome.com/docs/webstore/program-policies/quality-guidelines-faq/#:~:text=To%20maintain%20the%20quality%20of,in%20the%20Chrome%20Web%20Store.) requires "extensions to have only a single purpose with respect to its subject matter or browser function". In the meantime, the extension may be loaded in developer mode as an "unpacked extension" without impacting functionality.
-- Addition of a new tool currently requires a rebuild and reload. Hot-swappable tools would greatly enhance ease of tool sharing and developer synchronization. This might also be achieved with data-driven wrapping tools.
-- Omnitool lacks global and tool-specific configuration options. It does save a small amount of core state on close, but adding configuration or customization would require this to be extended.
-- A lack of sophisticated and relevant demo tools.
+- Adding a new tool currently requires a rebuild and reload. Hot-swappable tools would enhance ease of tool sharing and developer synchronization.
+- Omnitool lacks global and tool-specific configuration options. It does save a small amount of state on close, but adding configuration or customization would require an update.
 
-Thank you for reading! I'm looking forward to testing and feedback to see if this prototype is worth further development.
-
-Cheers!
+Thank you for reading!
